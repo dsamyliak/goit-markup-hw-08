@@ -9,7 +9,7 @@
       <style>
       @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
     </style> -->
-    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -22,172 +22,188 @@
   </head>
   <body>
     <header class="header-page">
-      <nav>
-        <a href="./index.html" class="logo link"
-          ><span class="logo-accent">Web</span>Studio</a
-        >
-        <ul class="nav list">
-          <li><a href="./index.html" class="link current">Студия</a></li>
-          <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-          <li><a href="#" class="link">Контакты</a></li>
-        </ul>
-      </nav>
-      <!--Почта и телефон-->
-      <ul class="contacts list">
-        <li>
-          <a href="mailto:info@devstudio.com" class="email link"
-            >info@devstudio.com</a
+      <div class="container header-block">
+        <div class="nav-block">
+          <a href="./index.html" class="logo link"
+            ><span class="logo-accent">Web</span>Studio</a
           >
-        </li>
-        <li>
-          <a href="tel:+380961111111" class="phone link">+38 096 111 11 11</a>
-        </li>
-      </ul>
+          <ul class="nav list">
+            <li class="nav-item">
+              <a href="./index.html" class="link current">Студия</a>
+            </li>
+            <li class="nav-item">
+              <a href="./portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="nav-item"><a href="#" class="link">Контакты</a></li>
+          </ul>
+        </div>
+        <!--Почта и телефон-->
+        <ul class="contacts list">
+          <li class="contacts-item">
+            <a href="mailto:info@devstudio.com" class="email link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-item">
+            <a href="tel:+380961111111" class="phone link">+38 096 111 11 11</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main class="main-page">
       <!--Эффективные решения для вашего бизнеса-->
       <section class="hero-section">
-        <h1 class="hero-title">
-          Эффективные решения<!--<br />-->
-          для вашего бизнеса
-        </h1>
-        <button type="button" class="hero-button">Заказать услугу</button>
+        <div class="hero-block container">
+          <h1 class="hero-title">
+            Эффективные решения<br />
+            для вашего бизнеса
+          </h1>
+          <div class="hero-button-block"><button type="button" class="hero-button">Заказать услугу</button></div>
+        </div>
       </section>
       <!--Наши преимущества-->
-      <section>
-        <!-- <h2>Особенности</h2> -->
-        <ul class="advantages-section list">
-          <li>
-            <h3 class="advantages-title">Внимание к деталям</h3>
-            <p class="advantages-text">
-              Идейные соображения, а также начало повседневной работы по
-              формированию позиции.
-            </p>
-          </li>
-          <li>
-            <h3 class="advantages-title">Пунктуальность</h3>
-            <p class="advantages-text">
-              Задача организации, в особенности же рамки и место обучения кадров
-              влечет за собой.
-            </p>
-          </li>
-          <li>
-            <h3 class="advantages-title">Планирование</h3>
-            <p class="advantages-text">
-              Равным образом консультация с широким активом в значительной
-              степени обуславливает.
-            </p>
-          </li>
-          <li>
-            <h3 class="advantages-title">Современные технологии</h3>
-            <p class="advantages-text">
-              Значимость этих проблем настолько очевидна, что реализация
-              плановых заданий.
-            </p>
-          </li>
-        </ul>
+      <section class="advantages">
+        <div class="advantages-block container">
+          <h2 class="advantages-main-title visually-hidden">Advantages</h2>
+          <ul class="advantages-section list">
+            <li>
+              <h3 class="advantages-title">Внимание к деталям</h3>
+              <p class="advantages-text">
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
+              </p>
+            </li>
+            <li>
+              <h3 class="advantages-title">Пунктуальность</h3>
+              <p class="advantages-text">
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
+              </p>
+            </li>
+            <li>
+              <h3 class="advantages-title">Планирование</h3>
+              <p class="advantages-text">
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
+              </p>
+            </li>
+            <li>
+              <h3 class="advantages-title">Современные технологии</h3>
+              <p class="advantages-text">
+                Значимость этих проблем настолько очевидна, что реализация
+                плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <!--Чем мы занимаемся-->
       <section class="ourwork list">
-        <h2 class="ourwork-title">Чем мы занимаемся</h2>
-        <ul class="examples list">
-          <li>
-            <img
-              src="./images/main/box-block-schema.jpg"
-              alt="стол с ноутбуком"
-              width="370"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/main/box-cellphone.jpg"
-              alt="ноутбук и телефон в руках у работника"
-              width="370"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/main/box-colormap.jpg"
-              alt="рабочий стол с цветовой картой на нем"
-              width="370"
-            />
-          </li>
-        </ul>
+        <div class="ourwork-block container">
+          <h2 class="ourwork-title">Чем мы занимаемся</h2>
+          <ul class="examples list">
+            <li>
+              <img
+                src="./images/main/box-block-schema.jpg"
+                alt="стол с ноутбуком"
+                width="370"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/main/box-cellphone.jpg"
+                alt="ноутбук и телефон в руках у работника"
+                width="370"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/main/box-colormap.jpg"
+                alt="рабочий стол с цветовой картой на нем"
+                width="370"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
       <!--Наша команда-->
       <section class="ourteam-section">
-        <h2 class="ourteam-title">Наша команда</h2>
-        <ul class="ourteam list">
-          <li class="team-card">
-            <img
-              src="./images/main/photo-pd.jpg"
-              alt="Игорь Демьяненко, дизайнер продукта"
-              width="270"
-              class="photo"
-            />
-            <h3 class="member-title">Игорь Демьяненко</h3>
-            <p lang="en" class="member-description">Product Designer</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="./images/main/photo-fd.jpg"
-              alt="Ольга Репина, фронтенд разработчик"
-              width="270"
-              class="photo"
-            />
-            <h3 class="member-title">Ольга Репина</h3>
-            <p lang="en" class="member-description">Frontend Developer</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="./images/main/photo-mrk.jpg"
-              alt="Николай Тарасов, маркетолог"
-              width="270"
-              class="photo"
-            />
-            <h3 class="member-title">Николай Тарасов</h3>
-            <p lang="en" class="member-description">Marketing</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="./images/main/photo-ui.jpg"
-              alt="Михаил Ермаков, дизайнер пользовательского интерфейса"
-              width="270"
-              class="photo"
-            />
-            <h3 class="member-title">Михаил Ермаков</h3>
-            <p lang="en" class="member-description">UI Designer</p>
-          </li>
-        </ul>
+        <div class="ourteam-block container">
+          <h2 class="ourteam-title">Наша команда</h2>
+          <ul class="ourteam list">
+            <li class="team-card">
+              <img
+                src="./images/main/photo-pd.jpg"
+                alt="Игорь Демьяненко, дизайнер продукта"
+                width="270"
+                class="photo"
+              />
+              <h3 class="member-title">Игорь Демьяненко</h3>
+              <p lang="en" class="member-description">Product Designer</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="./images/main/photo-fd.jpg"
+                alt="Ольга Репина, фронтенд разработчик"
+                width="270"
+                class="photo"
+              />
+              <h3 class="member-title">Ольга Репина</h3>
+              <p lang="en" class="member-description">Frontend Developer</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="./images/main/photo-mrk.jpg"
+                alt="Николай Тарасов, маркетолог"
+                width="270"
+                class="photo"
+              />
+              <h3 class="member-title">Николай Тарасов</h3>
+              <p lang="en" class="member-description">Marketing</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="./images/main/photo-ui.jpg"
+                alt="Михаил Ермаков, дизайнер пользовательского интерфейса"
+                width="270"
+                class="photo"
+              />
+              <h3 class="member-title">Михаил Ермаков</h3>
+              <p lang="en" class="member-description">UI Designer</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="footer-page">
-      <a href="./index.html" class="logo-footer link"
-        ><span class="logo-accent">Web</span>Studio</a
-      >
-      <address>
-        <ul class="adress list">
-          <li>
-            <a
-              href="https://www.google.com/maps/d/embed?mid=10uSM3H-mIU3GznYo2szRIEphczw"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="map-footer link"
-              >г. Киев, пр-т Леси Украинки, 26</a
-            >
-          </li>
-          <li>
-            <a href="mailto:info@example.com" class="email-footer link"
-              >info@example.com</a
-            >
-          </li>
-          <li>
-            <a href="tel:+380991111111" class="phone-footer link"
-              >+38 099 111 11 11</a
-            >
-          </li>
-        </ul>
-      </address>
+      <div class="footer-block container">
+        <a href="./index.html" class="logo-footer link"
+          ><span class="logo-accent">Web</span>Studio</a
+        >
+        <address>
+          <ul class="adress list">
+            <li>
+              <a
+                href="https://www.google.com/maps/d/embed?mid=10uSM3H-mIU3GznYo2szRIEphczw"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-footer link"
+                >г. Киев, пр-т Леси Украинки, 26</a
+              >
+            </li>
+            <li>
+              <a href="mailto:info@example.com" class="email-footer link"
+                >info@example.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+380991111111" class="phone-footer link"
+                >+38 099 111 11 11</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
