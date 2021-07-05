@@ -17,6 +17,10 @@
   --mainbgr-color: #e5e5e5;
   /* 2nd Main background color */
   --mainbgrtwo-color: #f5f4fa;
+  /* Icons main color */
+  --icons-color: #afb1b8;
+  /* Icons bgr color */
+  --icons-bgr-color: rgba(255, 255, 255, 0.1);
   /* Logo Font */
   --logo-font: Raleway;
   /* Main Font */
@@ -71,6 +75,7 @@ img {
 .advantages-title,
 .ourwork-title,
 .ourteam-title,
+.clients-title,
 .logo-footer,
 .project-title {
   font-weight: 700;
@@ -163,16 +168,53 @@ img {
   color: var(--secondary-text-color);
   margin-left: auto;
 }
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+.contacts-item:hover,
+.contacts-item:focus {
+  color: var(--accent-color);
+}
+.email {
+  display: inline-flex;
+  align-items: baseline;
+}
+.phone {
+  display: inline-flex;
+  align-items: center;
+}
+.email-icon {
+  padding: 0;
+  border: 0;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.phone-icon {
+  padding: 0;
+  border: 0;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
 .email:hover,
 .email:focus,
 .phone:hover,
 .phone:focus {
   color: var(--accent-color);
 }
+.email-icon:hover,
+.phone-icon:hover {
+  fill: var(--accent-color);
+}
+/* ----------------------------------- */
 /* Hero section */
 .hero-section {
-  background-color: var(--darkbgr-color);
   padding: 200px 0px;
+  background-color: var(--darkbgr-color);
 }
 .hero-title {
   margin-bottom: 30px;
@@ -211,6 +253,19 @@ img {
 .hero-button:focus {
   background-color: var(--accentbgr-color);
 }
+.hero-section.overlay {
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main/bg-hero.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  /* outline: 1px solid black; */
+}
 /* Advantages section */
 .advantages-block,
 .ourwork-block {
@@ -226,7 +281,19 @@ img {
 .adv-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.advantages-bgr-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--mainbgrtwo-color);
+  border-radius: 4px;
+}
 .advantages-title {
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -337,6 +404,123 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+/* Social nets icons */
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  width: 270px;
+  height: 44px;
+}
+
+.social-list-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icons-color);
+}
+.social-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-item.link:hover,
+.social-item.link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  border-radius: 50%;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.instagram-icon {
+  padding: 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.twitter-icon {
+  padding: 0;
+  border: 0;
+  width: 20px;
+  height: 16px;
+  fill: currentColor;
+}
+.facebook-icon {
+  padding: 0;
+  border: 0;
+  width: 10px;
+  height: 20px;
+  fill: currentColor;
+}
+.linkedin-icon {
+  padding: 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+/* Clients section */
+.clients-section {
+  background-color: var(--primary-white-color);
+}
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.clients-card {
+  background-color: var(--primary-white-color);
+  margin-left: 30px;
+  margin-top: 30px;
+
+  flex-basis: calc((100% - 180px) / 6);
+  align-items: center;
+
+  border-radius: 0px 0px 4px 4px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+
+  font-family: var(--main-font);
+  /* font-weight: 700; */
+  font-size: 36px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.card-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icons-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: var(--icons-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.card-border:hover,
+.card-border:focus {
+  color: var(--accent-color);
+  fill: currentColor;
+  border: 1px solid currentColor;
+}
 /* ------------- Footer ------------- */
 /* Footer page */
 .footer-page {
@@ -345,6 +529,14 @@ img {
 .footer-block {
   padding-top: 60px;
   padding-bottom: 60px;
+  display: flex;
+}
+.logo-adress {
+  padding-right: 70px;
+}
+.footer-social-block {
+  width: 206px;
+  padding-top: 12px;
 }
 /* Logo footer */
 .logo-footer {
@@ -384,7 +576,47 @@ img {
 .phone-footer {
   color: rgba(255, 255, 255, 0.6);
 }
-
+/* Social nets icons footer*/
+.social-block-title {
+  margin-bottom: 20px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 206px;
+  height: 44px;
+}
+.social-list-item.footer {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-white-color);
+  border-radius: 50%;
+}
+.social-item-foot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.social-item-foot:hover,
+.social-item-foot:focus {
+  background-color: var(--accent-color);
+}
 /* ------------------------------------------- */
 
 /* ----------- Portfolio ----------- */
@@ -428,11 +660,16 @@ img {
   margin-top: -30px;
 }
 .portfolio-page {
+  /* border: 0; */
   background-color: var(--primary-white-color);
-
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
+}
+.portfolio-page .link:hover,
+.portfolio-page .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .page-text {
   padding: 20px 24px;
