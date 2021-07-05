@@ -285,12 +285,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  content: "";
   height: 120px;
   margin-bottom: 30px;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--mainbgrtwo-color);
   border-radius: 4px;
 }
