@@ -1,4 +1,6 @@
 :root {
+  /* Colors */
+  /* -------------------------------- */
   /* Black */
   --primary-text-color: #000000;
   /* 2nd gray */
@@ -21,10 +23,14 @@
   --icons-color: #afb1b8;
   /* Icons bgr color */
   --icons-bgr-color: rgba(255, 255, 255, 0.1);
+  /* Fonts */
+  /* -------------------------------- */
   /* Logo Font */
   --logo-font: Raleway;
   /* Main Font */
   --main-font: Roboto;
+  /* Overlay and Animations */
+  /* -------------------------------- */
 }
 /* Tags */
 body {
