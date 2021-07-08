@@ -63,7 +63,15 @@
             для вашего бизнеса
           </h1>
           <div class="hero-button-block">
-            <button type="button" class="hero-button">Заказать услугу</button>
+            <button class="hero-button" data-modal-open>Заказать услугу</button>
+          </div>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <p>TEXT</p>
+              <button class="hero-button-close is-hidden" data-modal-close>
+                Закрыть
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -444,6 +452,6 @@
         </div>
       </div>
     </footer>
-    <script></script>
+    <script src="../js/modal.js"></script>
   </body>
 </html>
