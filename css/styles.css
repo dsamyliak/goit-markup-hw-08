@@ -304,6 +304,48 @@ img {
   margin-right: auto;
   /* outline: 1px solid black; */
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 500ms ease-in-out;
+  transition: scale 500ms linear;
+}
+.backdrop:hover .modal {
+  opacity: 1;
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 580px;
+  background-color: var(--primary-white-color);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-close {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-white-color);
+  border: 0;
+
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 /* Advantages section */
 .advantages-block,
 .ourwork-block {
