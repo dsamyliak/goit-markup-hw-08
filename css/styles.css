@@ -168,6 +168,19 @@ img {
 .nav .link.current {
   color: var(--accent-color);
 }
+.nav-item {
+  position: relative;
+}
+.link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: -200%;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 .nav .link:hover,
 .nav .link:focus,
 .adress .link:hover,
@@ -808,4 +821,14 @@ img {
   /* identical to box height, or 187% */
 
   letter-spacing: 0.03em;
+}
+.page-overlay {
+  position: relative;
+}
+.page-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  padding: 0px 24px;
 }
