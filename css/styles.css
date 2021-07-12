@@ -236,13 +236,12 @@ img {
 /* Transition for hover, focus */
 .link,
 .hero-button,
-.icons,
 .social-item.link,
 .filters .item {
-  transition: color var(--transition-option-250),
-    fill var(--transition-option-250), border var(--transition-option-250),
-    background-color var(--transition-option-250),
-    box-shadow var(--transition-option-250);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* transition: color var(--transition-option-slow-750),
     fill var(--transition-option-slow-750), border var(--transition-option-slow-750),
     background-color var(--transition-option-slow-750),
@@ -311,10 +310,15 @@ img {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity var(--transition-option-250),
-    visibility var(--transition-option-250);
+  /* opacity: 1;
+  visibility: visible; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -323,38 +327,9 @@ img {
   background-color: var(--primary-white-color);
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-}
-/* -------Modal Window Animation with translate----- */
-/* .backdrop.is-hidden > .modal {
-   animation: goUp 250ms linear 1 normal;
-  
-}
-@keyframes goUp {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, -100%);
-  }
-  100% {
-    transform: translate(-50%, -150%);
-  }
-} */
-/* -------Modal Window Animation with scale----- */
-.backdrop.is-hidden > .modal {
-  animation: goUpScale 250ms linear 1 normal;
-}
-@keyframes goUpScale {
-  0% {
-    transform: translate(-50%, -50%), scale(1);
-  }
-  50% {
-    transform: scale(0.6);
-  }
-  100% {
-    transform: scale(0.3);
-  }
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 .button-close {
   margin: 0;
@@ -368,11 +343,6 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
-}
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 /* Advantages section */
 .advantages-block,
@@ -546,7 +516,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--icons-color);
 }
 .social-item {
   width: 100%;
@@ -555,6 +524,7 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  color: var(--icons-color);
 }
 .social-item.link:hover,
 .social-item.link:focus {
@@ -851,5 +821,5 @@ img {
 .portfolio-page .link:focus .page-overlay-text {
   position: absolute;
   transform: translateY(0%);
-  transition: transform 250ms var(--transition-option-250);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
