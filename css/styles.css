@@ -32,9 +32,9 @@
   /* -------------------------------- */
   /* Overlay and Animations */
   /* Standard transition */
-  --transition-option: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-option-250: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* Slow transition */
-  --transition-option-slow: 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-option-slow-750: 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Tags */
 body {
@@ -239,13 +239,14 @@ img {
 .icons,
 .social-item.link,
 .filters .item {
-  transition: color var(--transition-option), fill var(--transition-option),
-    border var(--transition-option), background-color var(--transition-option),
-    box-shadow var(--transition-option);
-  /* transition: color var(--transition-option-slow),
-    fill var(--transition-option-slow), border var(--transition-option-slow),
-    background-color var(--transition-option-slow),
-    box-shadow var(--transition-option-slow); */
+  transition: color var(--transition-option-250),
+    fill var(--transition-option-250), border var(--transition-option-250),
+    background-color var(--transition-option-250),
+    box-shadow var(--transition-option-250);
+  /* transition: color var(--transition-option-slow-750),
+    fill var(--transition-option-slow-750), border var(--transition-option-slow-750),
+    background-color var(--transition-option-slow-750),
+    box-shadow var(--transition-option-slow-750); */
 }
 /* ----------------------------------- */
 /* Hero section */
@@ -312,8 +313,8 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
   visibility: visible;
-  transition: opacity var(--transition-option),
-    visibility var(--transition-option);
+  transition: opacity var(--transition-option-250),
+    visibility var(--transition-option-250);
 }
 .modal {
   position: absolute;
@@ -850,5 +851,5 @@ img {
 .portfolio-page .link:focus .page-overlay-text {
   position: absolute;
   transform: translateY(0%);
-  transition: transform 250ms ease-out;
+  transition: transform 250ms var(--transition-option-250);
 }
