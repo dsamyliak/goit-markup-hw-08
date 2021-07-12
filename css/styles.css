@@ -824,11 +824,31 @@ img {
 }
 .page-overlay {
   position: relative;
+  overflow: hidden;
 }
 .page-overlay-text {
   position: absolute;
-  top: 0;
   left: 0;
-  overflow-y: hidden;
-  padding: 0px 24px;
+  top: 0;
+  overflow-y: auto;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  color: var(--primary-white-color);
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  /* or 156% */
+  letter-spacing: 0.03em;
+}
+.portfolio-page .link:hover .page-overlay-text,
+.portfolio-page .link:focus .page-overlay-text {
+  position: absolute;
+  transform: translateY(0%);
+  transition: transform 250ms ease-out;
 }
