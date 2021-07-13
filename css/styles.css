@@ -87,7 +87,8 @@ img {
 .ourteam-title,
 .clients-title,
 .logo-footer,
-.project-title {
+.project-title,
+.button-subscribe {
   font-weight: 700;
 }
 /* Visually hidden h1,h2,h3,... */
@@ -237,7 +238,8 @@ img {
 .link,
 .hero-button,
 .social-item.link,
-.filters .item {
+.filters .item,
+.button-subscribe {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -348,10 +350,16 @@ img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  border-radius: 50%;
 
   position: absolute;
   top: 8px;
   right: 8px;
+}
+.button-close:hover,
+.button-close:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* Advantages section */
 .advantages-block,
@@ -720,6 +728,75 @@ img {
 .social-item-foot:hover,
 .social-item-foot:focus {
   background-color: var(--accent-color);
+}
+/* ------------------------------------- */
+/* Subscribe block */
+/* ------------------------------------- */
+.footer-subscribe-block {
+  padding-top: 12px;
+  margin-left: auto;
+}
+.subscr-group {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.subscribe-title {
+  margin-bottom: 20px;
+  font-family: var(--main-font);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.input-box {
+  /* position: absolute; */
+  width: 358px;
+  height: 50px;
+  padding: 15px 0 15px 16px;
+  margin-right: 12px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.button-subscribe {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border: 0;
+  padding: 10px 28px 10px 29px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 187% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+.button-subscribe:hover,
+.button-subscribe:focus {
+  background-color: var(--accentbgr-color);
+}
+.subscr-text {
+  margin-right: 10px;
 }
 /* ------------------------------------------- */
 
