@@ -88,16 +88,21 @@ img {
 .clients-title,
 .logo-footer,
 .project-title,
-.button-subscribe {
+.button-subscribe,
+.form-button {
   font-weight: 700;
 }
 /* Visually hidden h1,h2,h3,... */
 .visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
+  position: absolute !important;
+  clip: rect(0px 0px 0px 0px); /* IE6, IE7 */
+  clip: rect(0px, 0px, 0px, 0px);
+  padding: 0 !important;
+  border: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
   margin: -1px;
+  overflow: hidden;
 }
 .container {
   width: 1200px;
@@ -239,9 +244,12 @@ img {
 .hero-button,
 .social-item.link,
 .filters .item,
-.button-subscribe {
+.button-subscribe,
+.input-box,
+.form-button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* transition: color var(--transition-option-slow-750),
@@ -325,9 +333,9 @@ img {
   pointer-events: none;
 }
 .modal {
+  padding: 40px;
   position: absolute;
   width: 528px;
-  height: 580px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -351,16 +359,182 @@ img {
   height: 30px;
   cursor: pointer;
   border-radius: 50%;
-
+  fill: var(--primary-text-color);
   position: absolute;
   top: 8px;
   right: 8px;
+  outline: none;
 }
 .button-close:hover,
 .button-close:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Modal form inside elements */
+/* -------------------------- */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-form .form-field:not(:nth-child(5)) {
+  margin-bottom: 10px;
+}
+.form-title {
+  margin-bottom: 12px;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.form-field {
+  position: relative;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.18;
+  /* identical to box height */
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.form-field-wrapper {
+  position: relative;
+  margin-top: 4px;
+  display: block;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus + .form-block-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-block-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--title-text-color);
+}
+
+.form-message {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+.form-message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-message:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-checkbox-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+.form-checkbox-title::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--title-text-color);
+  cursor: pointer;
+}
+.form-checkbox:focus + .form-checkbox-title::before {
+  border: 1px solid var(--accent-color);
+}
+.form-checkbox:checked + .form-checkbox-title::before {
+  border: none;
+  background-image: url(../images/icon-check.png);
+  /* background-size: 16px 15px; */
+}
+.form-checkbox-title-link {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.form-checkbox-title-link:focus {
+  outline-color: var(--accent-color);
+}
+.form-button {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  border: 0;
+  padding: 10px 55px 10px 56px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: var(--main-font);
+  /* font-weight: 700; */
+  font-size: 16px;
+  line-height: 1.88;
+  /* identical to box height, or 187% */
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--accentbgr-color);
+  outline-offset: 2px;
+  outline-color: var(--accent-color);
+}
+/* -------------------------- */
 /* Advantages section */
 .advantages-block,
 .ourwork-block {
@@ -755,7 +929,6 @@ img {
   color: #ffffff;
 }
 .input-box {
-  /* position: absolute; */
   width: 358px;
   height: 50px;
   padding: 15px 0 15px 16px;
@@ -766,7 +939,14 @@ img {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  color: var(--primary-white-color);
+  outline: none;
+}
+.input-box::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+.input-box:focus {
+  border-color: var(--accent-color);
 }
 .button-subscribe {
   display: inline-block;
@@ -790,6 +970,7 @@ img {
 
   color: #ffffff;
   cursor: pointer;
+  /* outline: none; */
 }
 .button-subscribe:hover,
 .button-subscribe:focus {
