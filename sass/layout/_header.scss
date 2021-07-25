@@ -1,0 +1,124 @@
+/* Header */
+.header-page {
+  border-bottom: 1px solid #ececec;
+}
+.header-block {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+
+  color: var(--primary-text-color);
+  font-family: var(--logo-font);
+  /* font-weight: 700; */
+  font-size: 26px;
+  line-height: 1.2;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+}
+.logo-accent {
+  color: var(--accent-color);
+}
+/* Navigation */
+.nav-block {
+  display: flex;
+  align-items: center;
+}
+.nav,
+.contacts {
+  display: flex;
+  align-items: center;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: 94px;
+}
+.nav-item:not(:last-child) {
+  margin-right: 52px;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 52px;
+}
+.nav .link {
+  color: var(--title-text-color);
+}
+.nav .link.current {
+  color: var(--accent-color);
+}
+.nav-item {
+  position: relative;
+}
+.link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: -200%;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+.nav .link:hover,
+.nav .link:focus,
+.adress .link:hover,
+.adress .link:focus {
+  color: var(--accent-color);
+}
+.contacts {
+  color: var(--secondary-text-color);
+  margin-left: auto;
+}
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+.contacts-item:hover,
+.contacts-item:focus {
+  color: var(--accent-color);
+}
+.email {
+  display: inline-flex;
+  align-items: baseline;
+}
+.phone {
+  display: inline-flex;
+  align-items: center;
+}
+.email-icon {
+  padding: 0;
+  border: 0;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.phone-icon {
+  padding: 0;
+  border: 0;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.email:hover,
+.email:focus,
+.phone:hover,
+.phone:focus {
+  color: var(--accent-color);
+}
+.email-icon:hover,
+.phone-icon:hover {
+  fill: var(--accent-color);
+}

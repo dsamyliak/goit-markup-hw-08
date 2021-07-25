@@ -1,0 +1,12 @@
+/* Visually hidden h1,h2,h3,... */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(0px 0px 0px 0px); /* IE6, IE7 */
+  clip: rect(0px, 0px, 0px, 0px);
+  padding: 0 !important;
+  border: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px;
+  overflow: hidden;
+}
