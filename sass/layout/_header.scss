@@ -45,36 +45,34 @@
   align-items: center;
   margin-left: 94px;
 }
-.nav-item:not(:last-child) {
-  margin-right: 52px;
-}
-.contacts-item:not(:last-child) {
-  margin-right: 52px;
-}
 .nav .link {
   color: var(--title-text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .nav .link.current {
   color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -200%;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 .nav-item {
   position: relative;
-}
-.link.current::after {
-  position: absolute;
-  left: 0;
-  bottom: -200%;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-}
-.nav .link:hover,
-.nav .link:focus,
-.adress .link:hover,
-.adress .link:focus {
-  color: var(--accent-color);
+
+  &:not(:last-child) {
+    margin-right: 52px;
+  }
 }
 .contacts {
   color: var(--secondary-text-color);
@@ -83,18 +81,34 @@
 .contacts-item {
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &:not(:last-child) {
+    margin-right: 52px;
+  }
 }
-.contacts-item:hover,
-.contacts-item:focus {
-  color: var(--accent-color);
-}
+
 .email {
   display: inline-flex;
   align-items: baseline;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .phone {
   display: inline-flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .email-icon {
   padding: 0;
@@ -103,6 +117,10 @@
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
+
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
 .phone-icon {
   padding: 0;
@@ -111,14 +129,8 @@
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
-}
-.email:hover,
-.email:focus,
-.phone:hover,
-.phone:focus {
-  color: var(--accent-color);
-}
-.email-icon:hover,
-.phone-icon:hover {
-  fill: var(--accent-color);
+
+  &:hover {
+    fill: var(--accent-color);
+  }
 }

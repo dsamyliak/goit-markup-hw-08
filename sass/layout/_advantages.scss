@@ -9,10 +9,12 @@
 }
 .adv-item {
   width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.adv-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .advantages-bgr-icon {
   display: flex;
   justify-content: center;

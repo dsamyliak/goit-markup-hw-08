@@ -13,10 +13,12 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
-.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
+
 .button-close {
   margin: 0;
   padding: 0;
@@ -31,10 +33,11 @@
   top: 8px;
   right: 8px;
   outline: none;
-}
-.button-close:hover,
-.button-close:focus {
-  fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }

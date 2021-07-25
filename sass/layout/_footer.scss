@@ -38,13 +38,21 @@
   letter-spacing: 0.03em;
   /* Adress - not italic font-style */
   font-style: normal;
+
+  & .link:hover,
+  & .link:focus {
+    color: var(--accent-color);
+  }
 }
+
 .adress-item {
   line-height: 1.54;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
-.adress-item:not(:last-child) {
-  margin-bottom: 9px;
-}
+
 /* Contacts footer */
 .map-footer {
   color: var(--primary-white-color);
@@ -92,12 +100,13 @@
   border-radius: 4px;
   color: var(--primary-white-color);
   outline: none;
-}
-.input-box::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.input-box:focus {
-  border-color: var(--accent-color);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 .button-subscribe {
   display: inline-block;
@@ -122,10 +131,11 @@
   color: #ffffff;
   cursor: pointer;
   /* outline: none; */
-}
-.button-subscribe:hover,
-.button-subscribe:focus {
-  background-color: var(--accentbgr-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accentbgr-color);
+  }
 }
 .subscr-text {
   margin-right: 10px;
