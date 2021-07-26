@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
 }
-.adv-item {
+.advantages-items__item {
   width: 270px;
 
   &:not(:last-child) {
@@ -15,7 +15,7 @@
   }
 }
 
-.advantages-bgr-icon {
+.advantages-bgr {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@
   background-color: var(--mainbgrtwo-color);
   border-radius: 4px;
 }
-.advantages-title {
+.advantages__title {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-family: var(--main-font);
@@ -34,7 +34,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.advantages-text {
+.advantages__text {
   padding-bottom: 3px;
   color: var(--secondary-text-color);
   font-family: var(--main-font);

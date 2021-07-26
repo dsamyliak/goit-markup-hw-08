@@ -96,8 +96,8 @@ img {
 /* Common fonts */
 .logo,
 .hero-button,
-.advantages-title,
-.ourwork-title,
+.advantages__title,
+.ourwork__title,
 .ourteam-title,
 .clients-title,
 .logo-footer,
@@ -105,7 +105,7 @@ img {
 .button-subscribe,
 .form-button,
 .form-title,
-.ourwork-label,
+.ourwork__label,
 .subscribe-title,
 .social-block-title {
   font-weight: 700;
@@ -687,15 +687,15 @@ img {
   justify-content: space-between;
 }
 
-.adv-item {
+.advantages-items__item {
   width: 270px;
 }
 
-.adv-item:not(:last-child) {
+.advantages-items__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.advantages-bgr-icon {
+.advantages-bgr {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -705,7 +705,7 @@ img {
   border-radius: 4px;
 }
 
-.advantages-title {
+.advantages__title {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-family: var(--main-font);
@@ -716,7 +716,7 @@ img {
   text-transform: uppercase;
 }
 
-.advantages-text {
+.advantages__text {
   padding-bottom: 3px;
   color: var(--secondary-text-color);
   font-family: var(--main-font);
@@ -732,7 +732,7 @@ img {
   padding-top: 0px;
 }
 
-.ourwork-title {
+.ourwork__title {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-family: var(--main-font);
@@ -743,11 +743,11 @@ img {
   letter-spacing: 0.03em;
 }
 
-.ourwork-img {
+.ourwork__img {
   position: relative;
 }
 
-.ourwork-label {
+.ourwork__label {
   padding-top: 27px;
   padding-bottom: 27px;
   width: 100%;
@@ -773,7 +773,7 @@ img {
   flex-wrap: wrap;
 }
 
-.examples-item {
+.examples__item {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 90px) / 3);
