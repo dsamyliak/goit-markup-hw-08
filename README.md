@@ -1,2 +1,2 @@
-# goit-markup-hw-07
-Tech Skills Home Work #7 - Samyliak Dmytro 
+# goit-markup-hw-08
+Tech Skills Home Work #8 - Samyliak Dmytro 
