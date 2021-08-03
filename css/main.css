@@ -113,8 +113,15 @@ img {
 
 /* Section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* Transition for hover, focus */
@@ -1503,19 +1510,6 @@ img {
   background-color: var(--primary-white-color);
 }
 
-.advantages-items {
-  display: flex;
-  justify-content: space-between;
-}
-
-.advantages-items__item {
-  width: 270px;
-}
-
-.advantages-items__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .advantages-bgr {
   display: flex;
   justify-content: center;
@@ -1543,47 +1537,145 @@ img {
   font-family: var(--main-font);
   /* font-weight: 400; */
   font-size: 14px;
-  line-height: 1.72;
+  line-height: 1.7;
   /* or 171% */
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 479px) {
+  .advantages-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .advantages-items__item {
+    width: 100%;
+  }
+  .advantages-items__item:nth-of-type(-n + 3) {
+    margin-bottom: 30px;
+  }
+  .advantages__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .advantages-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .advantages-items__item {
+    width: 450px;
+  }
+  .advantages-items__item:nth-of-type(-n + 3) {
+    margin-bottom: 30px;
+  }
+  .advantages__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .advantages-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .advantages-items__item {
+    width: 354px;
+  }
+  .advantages-items__item:nth-of-type(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .advantages-items__item {
+    width: 270px;
+  }
+  .advantages-items__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .advantages-bgr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--mainbgrtwo-color);
+    border-radius: 4px;
+  }
+  .advantages__title {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-family: var(--main-font);
+    /* font-weight: 700; */
+    font-size: 14px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .advantages__text {
+    padding-bottom: 3px;
+    color: var(--secondary-text-color);
+    font-family: var(--main-font);
+    /* font-weight: 400; */
+    font-size: 14px;
+    line-height: 1.7;
+    /* or 171% */
+    letter-spacing: 0.03em;
+  }
+}
+
 /* Our work */
-.ourwork-block {
-  padding-top: 0px;
+.ourwork {
+  display: none;
 }
 
-.ourwork__title {
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-family: var(--main-font);
-  /* font-weight: 700; */
-  font-size: 36px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
-.ourwork__img {
-  position: relative;
-}
-
-.ourwork__label {
-  padding-top: 27px;
-  padding-bottom: 27px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  font-family: var(--main-font);
-  /* font-weight: 700; */
-  font-size: 14px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-white-color);
-  background-color: rgba(47, 48, 58, 0.8);
+@media screen and (min-width: 1200px) {
+  .ourwork {
+    display: block;
+  }
+  .ourwork-block {
+    padding-top: 0px;
+  }
+  .ourwork__title {
+    margin-bottom: 50px;
+    color: var(--title-text-color);
+    font-family: var(--main-font);
+    /* font-weight: 700; */
+    font-size: 36px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  .ourwork__img {
+    position: relative;
+  }
+  .ourwork__label {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: var(--main-font);
+    /* font-weight: 700; */
+    font-size: 14px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 }
 
 /* ---------- Examples ---------- */

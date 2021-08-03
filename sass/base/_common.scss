@@ -54,8 +54,16 @@ img {
 }
 /* Section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+// Desktop viewport from 1200px
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 /* Transition for hover, focus */
 .link,
