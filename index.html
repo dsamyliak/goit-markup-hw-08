@@ -194,43 +194,59 @@
           <ul class="examples list">
             <li class="examples__item">
               <div class="ourwork__img">
-                <img
-                  srcset="
-                    ./images/main/box-block-schema.jpg    1x,
-                    ./images/main/box-block-schema@2x.jpg 2x
-                  "
-                  src="./images/main/box-block-schema.jpg"
-                  alt="стол с ноутбуком"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/main/box-block-schema.jpg    1x,
+                      ./images/main/box-block-schema@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="#"
+                    alt="стол с
+                  ноутбуком"
+                    width="370"
+                  />
+                </picture>
                 <p class="ourwork__label">Десктопные приложения</p>
               </div>
             </li>
             <li class="examples__item">
               <div class="ourwork__img">
-                <img
-                  srcset="
-                    ./images/main/box-cellphone.jpg    1x,
-                    ./images/main/box-cellphone@2x.jpg 2x
-                  "
-                  src="./images/main/box-cellphone.jpg"
-                  alt="ноутбук и телефон в руках у работника"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/main/box-cellphone.jpg    1x,
+                      ./images/main/box-cellphone@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="#"
+                    alt="ноутбук и телефон в руках у работника"
+                    width="370"
+                  />
+                </picture>
                 <p class="ourwork__label">Мобильные приложения</p>
               </div>
             </li>
             <li class="examples__item">
               <div class="ourwork__img">
-                <img
-                  srcset="
-                    ./images/main/box-colormap.jpg    1x,
-                    ./images/main/box-colormap@2x.jpg 2x
-                  "
-                  src="./images/main/box-colormap.jpg"
-                  alt="рабочий стол с цветовой картой на нем"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/main/box-colormap.jpg    1x,
+                      ./images/main/box-colormap@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="#"
+                    alt="рабочий стол с цветовой картой на нем"
+                    width="370"
+                  />
+                </picture>
                 <p class="ourwork__label">Дизайнерские решения</p>
               </div>
             </li>
@@ -238,17 +254,40 @@
         </div>
       </section>
       <!--Наша команда-->
-      <!-- <section class="ourteam-section">
+      <section class="ourteam-section">
         <div class="ourteam-block container section">
           <h2 class="ourteam-title">Наша команда</h2>
           <ul class="ourteam list">
             <li class="team-card">
-              <img
-                src="./images/main/photo-pd.jpg"
-                alt="Игорь Демьяненко, дизайнер продукта"
-                width="270"
-                class="photo"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/main/photo-pd.jpg    1x,
+                    ./images/main/photo-pd@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/main/photo-pd-tablet.jpg    1x,
+                    ./images/main/photo-pd-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/main/photo-pd-mobile.jpg    1x,
+                    ./images/main/photo-pd-mobile@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/main/photo-pd.jpg"
+                  alt="Игорь Демьяненко, дизайнер продукта"
+                  width="270"
+                  class="photo"
+                />
+              </picture>
               <div class="card-text">
                 <h3 class="member-title">Игорь Демьяненко</h3>
                 <p lang="en" class="member-description">Product Designer</p>
@@ -285,12 +324,31 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/main/photo-fd.jpg"
-                alt="Ольга Репина, фронтенд разработчик"
-                width="270"
-                class="photo"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/main/photo-fd.jpg    1x,
+                    ./images/main/photo-fd@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/main/photo-fd-tablet.jpg    1x,
+                    ./images/main/photo-fd-tablet@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/main/photo-fd-mobile.jpg    1x,
+                    ./images/main/photo-fd-mobile@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/main/photo-fd.jpg"
+                  alt="Ольга Репина, фронтенд разработчик"
+                  width="270"
+                  class="photo"
+              /></picture>
               <div class="card-text">
                 <h3 class="member-title">Ольга Репина</h3>
                 <p lang="en" class="member-description">Frontend Developer</p>
@@ -327,12 +385,31 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/main/photo-mrk.jpg"
-                alt="Николай Тарасов, маркетолог"
-                width="270"
-                class="photo"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/main/photo-mrk.jpg    1x,
+                    ./images/main/photo-mrk@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/main/photo-mrk-tablet.jpg    1x,
+                    ./images/main/photo-mrk-tablet@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/main/photo-mrk-mobile.jpg    1x,
+                    ./images/main/photo-mrk-mobile@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/main/photo-mrk.jpg"
+                  alt="Николай Тарасов, маркетолог"
+                  width="270"
+                  class="photo"
+              /></picture>
               <div class="card-text">
                 <h3 class="member-title">Николай Тарасов</h3>
                 <p lang="en" class="member-description">Marketing</p>
@@ -369,12 +446,32 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/main/photo-ui.jpg"
-                alt="Михаил Ермаков, дизайнер пользовательского интерфейса"
-                width="270"
-                class="photo"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/main/photo-ui.jpg    1x,
+                    ./images/main/photo-ui@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/main/photo-ui-tablet.jpg    1x,
+                    ./images/main/photo-ui-tablet@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/main/photo-ui-mobile.jpg    1x,
+                    ./images/main/photo-ui-mobile@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/main/photo-ui.jpg"
+                  alt="Михаил Ермаков, дизайнер пользовательского интерфейса"
+                  width="270"
+                  class="photo"
+              /></picture>
+
               <div class="card-text">
                 <h3 class="member-title">Михаил Ермаков</h3>
                 <p lang="en" class="member-description">UI Designer</p>
@@ -412,7 +509,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Постоянные клиенты-->
       <!-- <section class="clients-section">
         <div class="clients-block container section">
