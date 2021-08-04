@@ -5,6 +5,7 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-left: -30px;
   margin-top: -30px;
 }
@@ -18,13 +19,12 @@
 
   border-radius: 0px 0px 4px 4px;
 }
-
 .clients-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   font-family: var(--main-font);
   /* font-weight: 700; */
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
@@ -52,4 +52,41 @@
   height: 60px;
   justify-content: center;
   align-items: center;
+}
+// Smartphone viewport 0px - 479px
+
+@media screen and (max-width: 479px) {
+  .clients-title {
+    font-size: 23px;
+  }
+  .card-border {
+    width: 130px;
+  }
+}
+
+// Smartphone Viewport from 480px to 768px
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .card-border {
+    width: 210px;
+  }
+}
+// Tablet Viewport from 768px to 1199px
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-border {
+    width: 226px;
+  }
+}
+// Desktop viewport from 1200px
+
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+  .card-border {
+    width: 170px;
+  }
 }
