@@ -4,16 +4,13 @@
   background-color: var(--darkbgr-color);
 }
 .footer-block {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
 }
-.logo-adress {
-  padding-right: 70px;
-}
+
 .footer-social-block {
   width: 206px;
-  padding-top: 12px;
 }
 /* Logo footer */
 .logo-footer {
@@ -22,8 +19,8 @@
   color: var(--primary-white-color);
   font-family: var(--logo-font);
   /* font-weight: 700; */
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   /* identical to box height */
   letter-spacing: 0.03em;
 }
@@ -49,7 +46,7 @@
   line-height: 1.54;
 
   &:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 }
 
@@ -88,10 +85,11 @@
   color: #ffffff;
 }
 .input-box {
-  width: 358px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 250px;
   height: 50px;
-  padding: 15px 0 15px 16px;
-  margin-right: 12px;
 
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -139,4 +137,186 @@
 }
 .subscr-text {
   margin-right: 10px;
+}
+// Smartphone viewport 0px - 479px
+
+@media screen and (max-width: 479px) {
+  .footer-block {
+    display: block;
+  }
+  .logo-adress {
+    margin-bottom: 60px;
+  }
+  .logo-footer {
+    display: block;
+    text-align: center;
+  }
+  /* Contacts footer */
+  .map-footer,
+  .email-footer,
+  .phone-footer {
+    text-align: center;
+  }
+  .footer-social-block {
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .footer-subscribe-block {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .subscribe-title {
+    text-align: center;
+  }
+  .subscr-group {
+    display: block;
+    text-align: center;
+  }
+  .label-email {
+    width: min-content;
+  }
+  .button-subscribe {
+    margin: 0 auto;
+  }
+
+  .adress-item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// Smartphone viewport from 480px - 767px
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-block {
+    display: block;
+  }
+  .logo-adress {
+    margin-bottom: 60px;
+  }
+  .logo-footer {
+    display: block;
+    text-align: center;
+  }
+  /* Contacts footer */
+  .map-footer,
+  .email-footer,
+  .phone-footer {
+    text-align: center;
+  }
+  .footer-social-block {
+    padding-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .footer-subscribe-block {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .subscribe-title {
+    text-align: center;
+  }
+  .subscr-group {
+    display: block;
+    text-align: center;
+  }
+
+  .button-subscribe {
+    margin: 0 auto;
+  }
+  .input-box {
+    padding: 10px;
+    width: 450px;
+  }
+  .adress-item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// Tablet Viewport from 768px to 1199px
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logo-adress {
+    padding-right: 165px;
+    margin-bottom: 60px;
+  }
+  .logo-footer {
+    text-align: center;
+    // font-size: 24px;
+    // line-height: 1.16;
+  }
+  /* Contacts footer */
+  .map-footer,
+  .email-footer,
+  .phone-footer {
+    text-align: center;
+  }
+  .footer-social-block {
+    padding-top: 5px;
+    text-align: center;
+  }
+  .footer-subscribe-block {
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .subscribe-title {
+    text-align: center;
+  }
+  .subscr-group {
+    display: block;
+  }
+  .button-subscribe {
+    margin: 0 auto;
+  }
+  .input-box {
+    padding: 10px;
+    width: 450px;
+  }
+  .adress-item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// Desktop viewport from 1200px
+
+@media screen and (min-width: 1200px) {
+  .logo-adress {
+    padding-right: 70px;
+  }
+  .footer-social-block {
+    padding-top: 12px;
+  }
+  /* Logo footer */
+  .logo-footer {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .adress-item {
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+  .input-box {
+    width: 358px;
+    height: 50px;
+    padding: 15px 15px 15px 16px;
+    margin-right: 12px;
+  }
 }
