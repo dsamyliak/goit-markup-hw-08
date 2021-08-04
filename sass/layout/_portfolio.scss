@@ -77,3 +77,22 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+// Smartphone viewport 0px - 479px
+
+@media screen and (max-width: 479px) {
+}
+
+// Smartphone viewport from 480px - 767px
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+// Tablet Viewport from 768px to 1199px
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+
+// Desktop viewport from 1200px
+
+@media screen and (min-width: 1200px) {
+}
