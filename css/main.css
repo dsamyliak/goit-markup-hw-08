@@ -80,6 +80,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Link and list */
@@ -1364,12 +1366,18 @@ img {
   text-transform: uppercase;
 }
 
+.hero-section.overlay {
+  background-size: cover;
+  min-height: 400px;
+}
+
 @media screen and (max-width: 479px) {
   .hero-section {
     padding: 60px 0px;
     background-color: var(--darkbgr-color);
   }
   .hero-section.overlay {
+    display: block;
     max-width: 100%;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-mobile.jpg);
     margin-left: auto;
@@ -1386,6 +1394,7 @@ img {
     background-color: var(--darkbgr-color);
   }
   .hero-section.overlay {
+    display: block;
     max-width: 100%;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-mobile@2x.jpg);
     margin-left: auto;
@@ -1403,7 +1412,6 @@ img {
   }
   .hero-section.overlay {
     max-width: 480px;
-    height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-mobile.jpg);
     margin-left: auto;
     margin-right: auto;
@@ -1417,7 +1425,6 @@ img {
   }
   .hero-section.overlay {
     max-width: 480px;
-    height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-mobile@2x.jpg);
     margin-left: auto;
     margin-right: auto;
@@ -1431,7 +1438,6 @@ img {
   }
   .hero-section.overlay {
     max-width: 768px;
-    height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-tablet.jpg);
     margin-left: auto;
     margin-right: auto;
@@ -1445,7 +1451,6 @@ img {
   }
   .hero-section.overlay {
     max-width: 768px;
-    height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero-tablet@2x.jpg);
     margin-left: auto;
     margin-right: auto;
@@ -1459,7 +1464,7 @@ img {
   }
   .hero-section.overlay {
     max-width: 1600px;
-    height: 600px;
+    min-height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero.jpg);
     margin-left: auto;
     margin-right: auto;
@@ -1485,7 +1490,7 @@ img {
   }
   .hero-section.overlay {
     max-width: 1600px;
-    height: 600px;
+    min-height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(./../images/main/bg-hero@2x.jpg);
     margin-left: auto;
     margin-right: auto;
