@@ -66,6 +66,9 @@
   .hero-title {
     font-size: 20px;
   }
+  .hero-section.overlay {
+    min-height: 265px;
+  }
 }
 
 // Smartphone viewport 0px - 479px+ dpr2
@@ -94,6 +97,9 @@
     .hero-title {
       font-size: 20px;
     }
+  }
+  .hero-section.overlay {
+    min-height: 265px;
   }
 }
 
