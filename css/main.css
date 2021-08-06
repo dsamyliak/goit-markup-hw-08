@@ -2293,7 +2293,7 @@ img {
 .page-overlay {
   position: relative;
   overflow: hidden;
-  min-height: 294px;
+  min-height: 100px;
 }
 
 .page-overlay-text {
