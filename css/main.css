@@ -344,6 +344,14 @@ img {
   }
 }
 
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  .modal {
+    position: absolute;
+    max-height: 100%;
+    overflow: scroll;
+  }
+}
+
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     padding: 40px;
@@ -1082,10 +1090,25 @@ img {
   .mobile-menu__social-contacts-wrapper
 .mobile-menu__social-contacts:not(:last-child) {
     padding-right: 10px;
-  }
-  .mobile-menu__social-contacts-wrapper
-.mobile-menu__social-contacts:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 800px) {
+  .mobile-menu {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+  }
+  .mobile-menu .mobile-menu__item.last {
+    margin-bottom: 32px;
+  }
+  .mobile-menu__social-contacts-wrapper {
+    margin-bottom: 32px;
+  }
+  .mobile-menu__contacts.email {
+    margin-bottom: 32px;
   }
 }
 
